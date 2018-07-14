@@ -1,7 +1,82 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nc6-SP-CG8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Home Screen View Controller-->
+        <scene sceneID="Jsq-Qa-3Ti">
+            <objects>
+                <viewController id="vm6-wA-5Wn" customClass="HomeScreenViewController" customModule="DataCaptureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L5h-LK-hpp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPq-Me-3pI">
+                                <rect key="frame" x="98" y="411" width="179" height="30"/>
+                                <state key="normal" title="Travel Money Competition"/>
+                                <connections>
+                                    <action selector="travelMoneyCompetitionButtonAction:" destination="vm6-wA-5Wn" eventType="touchUpInside" id="nxc-4n-iXr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmJ-Qa-ug4">
+                                <rect key="frame" x="145" y="617" width="85" height="30"/>
+                                <state key="normal" title="Admin Login"/>
+                                <connections>
+                                    <action selector="adminLoginButtonAction:" destination="vm6-wA-5Wn" eventType="touchUpInside" id="h1z-xo-cRa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxB-nJ-lyZ">
+                                <rect key="frame" x="116" y="270" width="142" height="30"/>
+                                <state key="normal" title="Mortgage Promotion"/>
+                                <connections>
+                                    <action selector="mortgagePromotionButtonAction:" destination="vm6-wA-5Wn" eventType="touchUpInside" id="qfs-vx-HSY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kxB-nJ-lyZ" firstAttribute="centerX" secondItem="L5h-LK-hpp" secondAttribute="centerX" id="Cin-EA-Z39"/>
+                            <constraint firstItem="gkk-0h-lCm" firstAttribute="trailing" secondItem="QmJ-Qa-ug4" secondAttribute="trailing" constant="145" id="FlI-Yq-UTk"/>
+                            <constraint firstItem="gkk-0h-lCm" firstAttribute="bottom" secondItem="jPq-Me-3pI" secondAttribute="bottom" constant="226" id="bsW-Fd-MZb"/>
+                            <constraint firstItem="kxB-nJ-lyZ" firstAttribute="leading" secondItem="gkk-0h-lCm" secondAttribute="leading" constant="116" id="ekP-6I-qcd"/>
+                            <constraint firstItem="jPq-Me-3pI" firstAttribute="leading" secondItem="gkk-0h-lCm" secondAttribute="leading" constant="98" id="iid-44-Jlc"/>
+                            <constraint firstItem="QmJ-Qa-ug4" firstAttribute="leading" secondItem="gkk-0h-lCm" secondAttribute="leading" constant="145" id="kot-wm-wkY"/>
+                            <constraint firstItem="gkk-0h-lCm" firstAttribute="bottom" secondItem="QmJ-Qa-ug4" secondAttribute="bottom" constant="20" id="no2-3m-rPG"/>
+                            <constraint firstItem="kxB-nJ-lyZ" firstAttribute="top" secondItem="gkk-0h-lCm" secondAttribute="top" constant="206" id="opk-gx-LIQ"/>
+                            <constraint firstItem="jPq-Me-3pI" firstAttribute="centerX" secondItem="L5h-LK-hpp" secondAttribute="centerX" id="tyb-in-8ir"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gkk-0h-lCm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vNK-hB-YRJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amp-dy-JFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="272.11394302848578"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WHX-Od-5PV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nc6-SP-CG8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vUR-d2-kF6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vm6-wA-5Wn" kind="relationship" relationship="rootViewController" id="R7S-65-eDA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFc-dS-haM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.80000000000001" y="272.11394302848578"/>
+        </scene>
+    </scenes>
 </document>

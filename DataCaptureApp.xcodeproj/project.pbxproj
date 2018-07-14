@@ -7,11 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A73613B555F7F3FD868CA82 /* Pods_DataCaptureApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4034AE4A2BF02D022C7EAD2 /* Pods_DataCaptureApp.framework */; };
 		4AFEE08D20F9B1C7001B1122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE08C20F9B1C7001B1122 /* AppDelegate.swift */; };
 		4AFEE08F20F9B1C7001B1122 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE08E20F9B1C7001B1122 /* ViewController.swift */; };
 		4AFEE09220F9B1C7001B1122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFEE09020F9B1C7001B1122 /* Main.storyboard */; };
 		4AFEE09420F9B1C8001B1122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AFEE09320F9B1C8001B1122 /* Assets.xcassets */; };
 		4AFEE09720F9B1C8001B1122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFEE09520F9B1C8001B1122 /* LaunchScreen.storyboard */; };
+		4AFEE0A320F9B3BB001B1122 /* CSVDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0A220F9B3BB001B1122 /* CSVDataManager.swift */; };
+		4AFEE0A820F9B491001B1122 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0A720F9B491001B1122 /* HomeScreenViewController.swift */; };
+		4AFEE0AB20F9B4AA001B1122 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFEE0AA20F9B4AA001B1122 /* HomeScreen.storyboard */; };
+		4AFEE0B020F9B864001B1122 /* MoneyCompetition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFEE0AF20F9B864001B1122 /* MoneyCompetition.storyboard */; };
+		4AFEE0B220F9B967001B1122 /* MoneyCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0B120F9B967001B1122 /* MoneyCompetitionViewController.swift */; };
+		4AFEE0B520F9B9C2001B1122 /* MoneyCompetitionLayoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0B420F9B9C2001B1122 /* MoneyCompetitionLayoutService.swift */; };
+		4AFEE0B820F9BAAB001B1122 /* MoneyCompetitionPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0B720F9BAAB001B1122 /* MoneyCompetitionPersonModel.swift */; };
+		4AFEE0BB20F9BCD5001B1122 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0BA20F9BCD5001B1122 /* UIStoryboardExtension.swift */; };
+		4AFEE0BE20F9BCFA001B1122 /* StoryboardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0BD20F9BCFA001B1122 /* StoryboardEnum.swift */; };
+		4AFEE0C120F9BD74001B1122 /* HomeScreenLayoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0C020F9BD74001B1122 /* HomeScreenLayoutService.swift */; };
+		4AFEE0C420F9C021001B1122 /* MoneyCompetitionDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0C320F9C021001B1122 /* MoneyCompetitionDatabaseManager.swift */; };
+		4AFEE0C920F9C14A001B1122 /* AdminLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFEE0C820F9C14A001B1122 /* AdminLogin.storyboard */; };
+		4AFEE0CB20F9C1A9001B1122 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0CA20F9C1A9001B1122 /* AdminLoginViewController.swift */; };
+		4AFEE0CE20F9C25D001B1122 /* AdminLoginLayoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0CD20F9C25D001B1122 /* AdminLoginLayoutService.swift */; };
+		4AFEE0D020F9C3C8001B1122 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0CF20F9C3C8001B1122 /* UIViewExtension.swift */; };
+		4AFEE0D520F9C52C001B1122 /* AdminPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFEE0D420F9C52C001B1122 /* AdminPanel.storyboard */; };
+		4AFEE0D820F9C5B0001B1122 /* AdminPanelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0D720F9C5B0001B1122 /* AdminPanelCell.swift */; };
+		4AFEE0DA20F9C5CE001B1122 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0D920F9C5CE001B1122 /* AdminPanelViewController.swift */; };
+		4AFEE0DD20F9C5EF001B1122 /* AdminPanelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0DC20F9C5EF001B1122 /* AdminPanelDataSource.swift */; };
+		4AFEE0DF20F9CA63001B1122 /* AdminPanelDownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0DE20F9CA63001B1122 /* AdminPanelDownloadCell.swift */; };
+		4AFEE0E220F9CD8F001B1122 /* AdminPanelLayoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0E120F9CD8F001B1122 /* AdminPanelLayoutService.swift */; };
+		4AFEE0E720F9CFCE001B1122 /* MortgagePromotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFEE0E620F9CFCE001B1122 /* MortgagePromotion.storyboard */; };
+		4AFEE0EA20F9D22E001B1122 /* MortgageTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0E920F9D22E001B1122 /* MortgageTextFieldCell.swift */; };
+		4AFEE0EC20F9D242001B1122 /* MortgagePickCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0EB20F9D242001B1122 /* MortgagePickCell.swift */; };
+		4AFEE0EE20F9D264001B1122 /* MortgageBuyerTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0ED20F9D264001B1122 /* MortgageBuyerTypeCell.swift */; };
+		4AFEE0F120F9D2DD001B1122 /* MortgagePromotionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0F020F9D2DD001B1122 /* MortgagePromotionDataSource.swift */; };
+		4AFEE0F320F9D467001B1122 /* MortgagePromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0F220F9D467001B1122 /* MortgagePromotionViewController.swift */; };
+		4AFEE0F520F9D84B001B1122 /* MortgagePromotionPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEE0F420F9D84B001B1122 /* MortgagePromotionPersonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +51,37 @@
 		4AFEE09320F9B1C8001B1122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AFEE09620F9B1C8001B1122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AFEE09820F9B1C8001B1122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AFEE0A220F9B3BB001B1122 /* CSVDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVDataManager.swift; sourceTree = "<group>"; };
+		4AFEE0A720F9B491001B1122 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		4AFEE0AA20F9B4AA001B1122 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
+		4AFEE0AF20F9B864001B1122 /* MoneyCompetition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoneyCompetition.storyboard; sourceTree = "<group>"; };
+		4AFEE0B120F9B967001B1122 /* MoneyCompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyCompetitionViewController.swift; sourceTree = "<group>"; };
+		4AFEE0B420F9B9C2001B1122 /* MoneyCompetitionLayoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyCompetitionLayoutService.swift; sourceTree = "<group>"; };
+		4AFEE0B720F9BAAB001B1122 /* MoneyCompetitionPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyCompetitionPersonModel.swift; sourceTree = "<group>"; };
+		4AFEE0BA20F9BCD5001B1122 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		4AFEE0BD20F9BCFA001B1122 /* StoryboardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEnum.swift; sourceTree = "<group>"; };
+		4AFEE0C020F9BD74001B1122 /* HomeScreenLayoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenLayoutService.swift; sourceTree = "<group>"; };
+		4AFEE0C320F9C021001B1122 /* MoneyCompetitionDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyCompetitionDatabaseManager.swift; sourceTree = "<group>"; };
+		4AFEE0C820F9C14A001B1122 /* AdminLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminLogin.storyboard; sourceTree = "<group>"; };
+		4AFEE0CA20F9C1A9001B1122 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
+		4AFEE0CD20F9C25D001B1122 /* AdminLoginLayoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginLayoutService.swift; sourceTree = "<group>"; };
+		4AFEE0CF20F9C3C8001B1122 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		4AFEE0D420F9C52C001B1122 /* AdminPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminPanel.storyboard; sourceTree = "<group>"; };
+		4AFEE0D720F9C5B0001B1122 /* AdminPanelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelCell.swift; sourceTree = "<group>"; };
+		4AFEE0D920F9C5CE001B1122 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelViewController.swift; sourceTree = "<group>"; };
+		4AFEE0DC20F9C5EF001B1122 /* AdminPanelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelDataSource.swift; sourceTree = "<group>"; };
+		4AFEE0DE20F9CA63001B1122 /* AdminPanelDownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelDownloadCell.swift; sourceTree = "<group>"; };
+		4AFEE0E120F9CD8F001B1122 /* AdminPanelLayoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelLayoutService.swift; sourceTree = "<group>"; };
+		4AFEE0E620F9CFCE001B1122 /* MortgagePromotion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MortgagePromotion.storyboard; sourceTree = "<group>"; };
+		4AFEE0E920F9D22E001B1122 /* MortgageTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageTextFieldCell.swift; sourceTree = "<group>"; };
+		4AFEE0EB20F9D242001B1122 /* MortgagePickCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgagePickCell.swift; sourceTree = "<group>"; };
+		4AFEE0ED20F9D264001B1122 /* MortgageBuyerTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageBuyerTypeCell.swift; sourceTree = "<group>"; };
+		4AFEE0F020F9D2DD001B1122 /* MortgagePromotionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgagePromotionDataSource.swift; sourceTree = "<group>"; };
+		4AFEE0F220F9D467001B1122 /* MortgagePromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgagePromotionViewController.swift; sourceTree = "<group>"; };
+		4AFEE0F420F9D84B001B1122 /* MortgagePromotionPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgagePromotionPersonModel.swift; sourceTree = "<group>"; };
+		70B8B981A060CAE325470476 /* Pods-DataCaptureApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataCaptureApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DataCaptureApp/Pods-DataCaptureApp.release.xcconfig"; sourceTree = "<group>"; };
+		840D1939D4801ADF30F3F65E /* Pods-DataCaptureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataCaptureApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DataCaptureApp/Pods-DataCaptureApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B4034AE4A2BF02D022C7EAD2 /* Pods_DataCaptureApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataCaptureApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +89,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A73613B555F7F3FD868CA82 /* Pods_DataCaptureApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09A62C47616983EF706868D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				840D1939D4801ADF30F3F65E /* Pods-DataCaptureApp.debug.xcconfig */,
+				70B8B981A060CAE325470476 /* Pods-DataCaptureApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4AFEE08020F9B1C7001B1122 = {
 			isa = PBXGroup;
 			children = (
 				4AFEE08B20F9B1C7001B1122 /* DataCaptureApp */,
 				4AFEE08A20F9B1C7001B1122 /* Products */,
+				09A62C47616983EF706868D4 /* Pods */,
+				E9097444CAE7815DF4D3EB2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +126,16 @@
 		4AFEE08B20F9B1C7001B1122 /* DataCaptureApp */ = {
 			isa = PBXGroup;
 			children = (
+				4AFEE09F20F9B236001B1122 /* Groups */,
+				4AFEE0A020F9B3A9001B1122 /* Core */,
+				4AFEE09E20F9B21E001B1122 /* DataCaptureApp */,
+			);
+			path = DataCaptureApp;
+			sourceTree = "<group>";
+		};
+		4AFEE09E20F9B21E001B1122 /* DataCaptureApp */ = {
+			isa = PBXGroup;
+			children = (
 				4AFEE08C20F9B1C7001B1122 /* AppDelegate.swift */,
 				4AFEE08E20F9B1C7001B1122 /* ViewController.swift */,
 				4AFEE09020F9B1C7001B1122 /* Main.storyboard */,
@@ -64,6 +146,280 @@
 			path = DataCaptureApp;
 			sourceTree = "<group>";
 		};
+		4AFEE09F20F9B236001B1122 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0E320F9CFB7001B1122 /* MortgagePromotion */,
+				4AFEE0D120F9C518001B1122 /* AdminPanel */,
+				4AFEE0C520F9C135001B1122 /* AdminLogin */,
+				4AFEE0AC20F9B84E001B1122 /* MoneyCompetition */,
+				4AFEE0A420F9B479001B1122 /* HomeScreen */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		4AFEE0A020F9B3A9001B1122 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0C220F9C012001B1122 /* DatabaseManager */,
+				4AFEE0BC20F9BCEF001B1122 /* Constant */,
+				4AFEE0B920F9BCC9001B1122 /* Extension */,
+				4AFEE0B620F9BA99001B1122 /* Model */,
+				4AFEE0A120F9B3AF001B1122 /* Manager */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4AFEE0A120F9B3AF001B1122 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0A220F9B3BB001B1122 /* CSVDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4AFEE0A420F9B479001B1122 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0BF20F9BD5E001B1122 /* Manager */,
+				4AFEE0A620F9B484001B1122 /* Storyboard */,
+				4AFEE0A520F9B47F001B1122 /* ViewController */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		4AFEE0A520F9B47F001B1122 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0A720F9B491001B1122 /* HomeScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4AFEE0A620F9B484001B1122 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0AA20F9B4AA001B1122 /* HomeScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4AFEE0AC20F9B84E001B1122 /* MoneyCompetition */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0B320F9B9B7001B1122 /* Manager */,
+				4AFEE0AE20F9B858001B1122 /* Storyboard */,
+				4AFEE0AD20F9B854001B1122 /* ViewController */,
+			);
+			path = MoneyCompetition;
+			sourceTree = "<group>";
+		};
+		4AFEE0AD20F9B854001B1122 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0B120F9B967001B1122 /* MoneyCompetitionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4AFEE0AE20F9B858001B1122 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0AF20F9B864001B1122 /* MoneyCompetition.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4AFEE0B320F9B9B7001B1122 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0B420F9B9C2001B1122 /* MoneyCompetitionLayoutService.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4AFEE0B620F9BA99001B1122 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0B720F9BAAB001B1122 /* MoneyCompetitionPersonModel.swift */,
+				4AFEE0F420F9D84B001B1122 /* MortgagePromotionPersonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AFEE0B920F9BCC9001B1122 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0BA20F9BCD5001B1122 /* UIStoryboardExtension.swift */,
+				4AFEE0CF20F9C3C8001B1122 /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4AFEE0BC20F9BCEF001B1122 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0BD20F9BCFA001B1122 /* StoryboardEnum.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		4AFEE0BF20F9BD5E001B1122 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0C020F9BD74001B1122 /* HomeScreenLayoutService.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4AFEE0C220F9C012001B1122 /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0C320F9C021001B1122 /* MoneyCompetitionDatabaseManager.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		4AFEE0C520F9C135001B1122 /* AdminLogin */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0CC20F9C242001B1122 /* Manager */,
+				4AFEE0C720F9C141001B1122 /* Storyboard */,
+				4AFEE0C620F9C13A001B1122 /* ViewController */,
+			);
+			path = AdminLogin;
+			sourceTree = "<group>";
+		};
+		4AFEE0C620F9C13A001B1122 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0CA20F9C1A9001B1122 /* AdminLoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4AFEE0C720F9C141001B1122 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0C820F9C14A001B1122 /* AdminLogin.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4AFEE0CC20F9C242001B1122 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0CD20F9C25D001B1122 /* AdminLoginLayoutService.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4AFEE0D120F9C518001B1122 /* AdminPanel */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0E020F9CD84001B1122 /* Manager */,
+				4AFEE0D620F9C5A6001B1122 /* Cell */,
+				4AFEE0DB20F9C5E2001B1122 /* DataSource */,
+				4AFEE0D320F9C521001B1122 /* Storyboard */,
+				4AFEE0D220F9C51C001B1122 /* ViewController */,
+			);
+			path = AdminPanel;
+			sourceTree = "<group>";
+		};
+		4AFEE0D220F9C51C001B1122 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0D920F9C5CE001B1122 /* AdminPanelViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4AFEE0D320F9C521001B1122 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0D420F9C52C001B1122 /* AdminPanel.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4AFEE0D620F9C5A6001B1122 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0D720F9C5B0001B1122 /* AdminPanelCell.swift */,
+				4AFEE0DE20F9CA63001B1122 /* AdminPanelDownloadCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4AFEE0DB20F9C5E2001B1122 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0DC20F9C5EF001B1122 /* AdminPanelDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		4AFEE0E020F9CD84001B1122 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0E120F9CD8F001B1122 /* AdminPanelLayoutService.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4AFEE0E320F9CFB7001B1122 /* MortgagePromotion */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0E820F9D222001B1122 /* Cell */,
+				4AFEE0EF20F9D2CF001B1122 /* DataSource */,
+				4AFEE0E520F9CFC2001B1122 /* Storyboard */,
+				4AFEE0E420F9CFBE001B1122 /* ViewController */,
+			);
+			path = MortgagePromotion;
+			sourceTree = "<group>";
+		};
+		4AFEE0E420F9CFBE001B1122 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0F220F9D467001B1122 /* MortgagePromotionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4AFEE0E520F9CFC2001B1122 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0E620F9CFCE001B1122 /* MortgagePromotion.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4AFEE0E820F9D222001B1122 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0E920F9D22E001B1122 /* MortgageTextFieldCell.swift */,
+				4AFEE0EB20F9D242001B1122 /* MortgagePickCell.swift */,
+				4AFEE0ED20F9D264001B1122 /* MortgageBuyerTypeCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4AFEE0EF20F9D2CF001B1122 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4AFEE0F020F9D2DD001B1122 /* MortgagePromotionDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E9097444CAE7815DF4D3EB2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4034AE4A2BF02D022C7EAD2 /* Pods_DataCaptureApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +427,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AFEE09B20F9B1C8001B1122 /* Build configuration list for PBXNativeTarget "DataCaptureApp" */;
 			buildPhases = (
+				5690E3BD226F33CFCA40660E /* [CP] Check Pods Manifest.lock */,
 				4AFEE08520F9B1C7001B1122 /* Sources */,
 				4AFEE08620F9B1C7001B1122 /* Frameworks */,
 				4AFEE08720F9B1C7001B1122 /* Resources */,
+				90B66A25C8698A9E8F0D399E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,21 +480,92 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFEE0E720F9CFCE001B1122 /* MortgagePromotion.storyboard in Resources */,
 				4AFEE09720F9B1C8001B1122 /* LaunchScreen.storyboard in Resources */,
+				4AFEE0AB20F9B4AA001B1122 /* HomeScreen.storyboard in Resources */,
+				4AFEE0C920F9C14A001B1122 /* AdminLogin.storyboard in Resources */,
 				4AFEE09420F9B1C8001B1122 /* Assets.xcassets in Resources */,
 				4AFEE09220F9B1C7001B1122 /* Main.storyboard in Resources */,
+				4AFEE0B020F9B864001B1122 /* MoneyCompetition.storyboard in Resources */,
+				4AFEE0D520F9C52C001B1122 /* AdminPanel.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5690E3BD226F33CFCA40660E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DataCaptureApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90B66A25C8698A9E8F0D399E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DataCaptureApp/Pods-DataCaptureApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSV.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DataCaptureApp/Pods-DataCaptureApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4AFEE08520F9B1C7001B1122 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFEE0F520F9D84B001B1122 /* MortgagePromotionPersonModel.swift in Sources */,
 				4AFEE08F20F9B1C7001B1122 /* ViewController.swift in Sources */,
+				4AFEE0DA20F9C5CE001B1122 /* AdminPanelViewController.swift in Sources */,
+				4AFEE0CE20F9C25D001B1122 /* AdminLoginLayoutService.swift in Sources */,
+				4AFEE0A820F9B491001B1122 /* HomeScreenViewController.swift in Sources */,
+				4AFEE0DF20F9CA63001B1122 /* AdminPanelDownloadCell.swift in Sources */,
+				4AFEE0BB20F9BCD5001B1122 /* UIStoryboardExtension.swift in Sources */,
+				4AFEE0E220F9CD8F001B1122 /* AdminPanelLayoutService.swift in Sources */,
+				4AFEE0D020F9C3C8001B1122 /* UIViewExtension.swift in Sources */,
+				4AFEE0B220F9B967001B1122 /* MoneyCompetitionViewController.swift in Sources */,
+				4AFEE0EA20F9D22E001B1122 /* MortgageTextFieldCell.swift in Sources */,
+				4AFEE0BE20F9BCFA001B1122 /* StoryboardEnum.swift in Sources */,
 				4AFEE08D20F9B1C7001B1122 /* AppDelegate.swift in Sources */,
+				4AFEE0F320F9D467001B1122 /* MortgagePromotionViewController.swift in Sources */,
+				4AFEE0EC20F9D242001B1122 /* MortgagePickCell.swift in Sources */,
+				4AFEE0CB20F9C1A9001B1122 /* AdminLoginViewController.swift in Sources */,
+				4AFEE0D820F9C5B0001B1122 /* AdminPanelCell.swift in Sources */,
+				4AFEE0C120F9BD74001B1122 /* HomeScreenLayoutService.swift in Sources */,
+				4AFEE0C420F9C021001B1122 /* MoneyCompetitionDatabaseManager.swift in Sources */,
+				4AFEE0DD20F9C5EF001B1122 /* AdminPanelDataSource.swift in Sources */,
+				4AFEE0B820F9BAAB001B1122 /* MoneyCompetitionPersonModel.swift in Sources */,
+				4AFEE0EE20F9D264001B1122 /* MortgageBuyerTypeCell.swift in Sources */,
+				4AFEE0B520F9B9C2001B1122 /* MoneyCompetitionLayoutService.swift in Sources */,
+				4AFEE0F120F9D2DD001B1122 /* MortgagePromotionDataSource.swift in Sources */,
+				4AFEE0A320F9B3BB001B1122 /* CSVDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,10 +707,12 @@
 		};
 		4AFEE09C20F9B1C8001B1122 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 840D1939D4801ADF30F3F65E /* Pods-DataCaptureApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DataCaptureApp/Info.plist;
+				DEVELOPMENT_TEAM = 8SNBPDEWV3;
+				INFOPLIST_FILE = "$(SRCROOT)/DataCaptureApp/DataCaptureApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,10 +726,12 @@
 		};
 		4AFEE09D20F9B1C8001B1122 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70B8B981A060CAE325470476 /* Pods-DataCaptureApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DataCaptureApp/Info.plist;
+				DEVELOPMENT_TEAM = 8SNBPDEWV3;
+				INFOPLIST_FILE = "$(SRCROOT)/DataCaptureApp/DataCaptureApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

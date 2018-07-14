@@ -6,4 +6,12 @@
 //  Copyright © 2018 Stanislau Sakharchuk. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class AdminPanelDownloadCell: UITableViewCell {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+}

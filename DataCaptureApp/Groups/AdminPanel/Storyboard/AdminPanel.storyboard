@@ -19,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hqT-ul-OQH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="hqT-ul-OQH">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YMe-Uc-byf" customClass="AdminPanelCell" customModule="DataCaptureApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AdminPanelCell" id="YMe-Uc-byf" customClass="AdminPanelCell" customModule="DataCaptureApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YMe-Uc-byf" id="qTU-7a-8aj">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -36,31 +36,83 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jab-tE-g4S">
-                                                    <rect key="frame" x="291" y="6" width="69" height="30"/>
-                                                    <state key="normal" title="Download"/>
-                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="3xi-7z-puH">
+                                                    <rect key="frame" x="336" y="10" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="TU7-Ux-3um"/>
+                                                        <constraint firstAttribute="width" constant="24" id="X3R-U0-nfA"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Jab-tE-g4S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8pS-Uw-FiH" secondAttribute="trailing" constant="7" id="77k-zx-FOz"/>
+                                                <constraint firstItem="3xi-7z-puH" firstAttribute="centerY" secondItem="qTU-7a-8aj" secondAttribute="centerY" id="FUJ-3x-Gl9"/>
+                                                <constraint firstAttribute="trailing" secondItem="3xi-7z-puH" secondAttribute="trailing" constant="15" id="Oju-oj-gCj"/>
                                                 <constraint firstItem="8pS-Uw-FiH" firstAttribute="leading" secondItem="qTU-7a-8aj" secondAttribute="leadingMargin" id="SOA-aF-56v"/>
-                                                <constraint firstItem="Jab-tE-g4S" firstAttribute="centerY" secondItem="qTU-7a-8aj" secondAttribute="centerY" id="YOU-Hj-nXc"/>
-                                                <constraint firstAttribute="trailing" secondItem="Jab-tE-g4S" secondAttribute="trailing" constant="15" id="msW-BF-KFN"/>
                                                 <constraint firstItem="8pS-Uw-FiH" firstAttribute="centerY" secondItem="qTU-7a-8aj" secondAttribute="centerY" id="vqp-wq-5eq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkmarkImageView" destination="3xi-7z-puH" id="bkH-eM-jgv"/>
                                             <outlet property="leadsCountLabel" destination="8pS-Uw-FiH" id="26d-ju-9Q8"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AdminPanelDownloadCell" rowHeight="84" id="Bgv-sy-8WO" customClass="AdminPanelDownloadCell" customModule="DataCaptureApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bgv-sy-8WO" id="qKp-mi-6nO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBU-F8-H6y">
+                                                    <rect key="frame" x="61" y="23" width="253" height="37.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Download"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KBU-F8-H6y" firstAttribute="leading" secondItem="qKp-mi-6nO" secondAttribute="leadingMargin" constant="46" id="RXi-ie-IAP"/>
+                                                <constraint firstItem="KBU-F8-H6y" firstAttribute="centerY" secondItem="qKp-mi-6nO" secondAttribute="centerY" id="UpE-hG-kKU"/>
+                                                <constraint firstItem="KBU-F8-H6y" firstAttribute="centerX" secondItem="qKp-mi-6nO" secondAttribute="centerX" id="Y5o-zE-JRG"/>
+                                                <constraint firstItem="KBU-F8-H6y" firstAttribute="top" secondItem="qKp-mi-6nO" secondAttribute="top" constant="23" id="kRx-h2-QLs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkG-1p-diX">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrY-dv-pBQ">
+                                        <rect key="frame" x="61" y="1" width="253" height="37.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37.5" id="Dt2-Cv-qlG"/>
+                                        </constraints>
+                                        <state key="normal" title="Log out">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logOutButtonAction:" destination="u9z-7x-z6s" eventType="touchUpInside" id="76P-YZ-hWZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wrY-dv-pBQ" firstAttribute="centerX" secondItem="GkG-1p-diX" secondAttribute="centerX" id="3fg-KJ-nMW"/>
+                                    <constraint firstItem="wrY-dv-pBQ" firstAttribute="centerY" secondItem="GkG-1p-diX" secondAttribute="centerY" constant="-2.25" id="BiS-8L-CcD"/>
+                                    <constraint firstAttribute="height" constant="44" id="YWY-bA-IFZ"/>
+                                    <constraint firstItem="wrY-dv-pBQ" firstAttribute="leading" secondItem="GkG-1p-diX" secondAttribute="leading" constant="61" id="yJz-gN-58y"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wAa-Tr-2OM" firstAttribute="bottom" secondItem="hqT-ul-OQH" secondAttribute="bottom" id="8Hm-o4-SAu"/>
                             <constraint firstItem="hqT-ul-OQH" firstAttribute="top" secondItem="wAa-Tr-2OM" secondAttribute="top" id="FwQ-5Q-rfS"/>
+                            <constraint firstItem="GkG-1p-diX" firstAttribute="leading" secondItem="wAa-Tr-2OM" secondAttribute="leading" id="a8V-GA-ZGe"/>
+                            <constraint firstAttribute="bottom" secondItem="GkG-1p-diX" secondAttribute="bottom" id="fhY-Cf-bJy"/>
                             <constraint firstItem="hqT-ul-OQH" firstAttribute="leading" secondItem="A7w-Zk-1Qs" secondAttribute="leading" id="iRI-l0-Jyd"/>
+                            <constraint firstItem="GkG-1p-diX" firstAttribute="trailing" secondItem="wAa-Tr-2OM" secondAttribute="trailing" id="vzX-PF-GFg"/>
                             <constraint firstItem="wAa-Tr-2OM" firstAttribute="trailing" secondItem="hqT-ul-OQH" secondAttribute="trailing" id="zNa-Vf-uIj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wAa-Tr-2OM"/>
@@ -71,7 +123,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sG6-eu-gkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="-104"/>
+            <point key="canvasLocation" x="436" y="-104.7976011994003"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark_unchecked" width="26" height="26"/>
+    </resources>
 </document>

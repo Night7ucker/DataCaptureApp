@@ -6,4 +6,19 @@
 //  Copyright © 2018 Stanislau Sakharchuk. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MortgagePickCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func set(with title: String) {
+        titleLabel.text = title
+    }
+    
+}
