@@ -2,13 +2,22 @@
 //  HomeScreenViewController.swift
 //  DataCaptureApp
 //
-//  Created by Stanislau Sakharchuk on 7/14/18.
-//  Copyright © 2018 Stanislau Sakharchuk. All rights reserved.
+//  Created by Evgeny Mahnach on 7/14/18.
+//  Copyright © 2018 Evgeny Mahnach. All rights reserved.
 //
 
 import UIKit
 
 class HomeScreenViewController: UIViewController {
+    
+    // - UI
+    
+    @IBOutlet weak var blueMainView: UIView!
+    @IBOutlet weak var redMainView: UIView!
+    @IBOutlet weak var leftGetStartedButton: UIButton!
+    @IBOutlet weak var rightGetStartedButton: UIButton!
+    @IBOutlet weak var leftImageView: UIImageView!
+    @IBOutlet weak var rightImageView: UIImageView!
     
     // - Manager / Service
     fileprivate var layoutService: HomeScreenLayoutService!
@@ -19,6 +28,15 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         
         configure()
+        
+        let documentsPath1 = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
+        let logsPath = documentsPath1.appendingPathComponent("data")
+        print(logsPath!)
+        do {
+            try FileManager.default.createDirectory(atPath: logsPath!.path, withIntermediateDirectories: true, attributes: nil)
+        } catch let error as NSError {
+            NSLog("Unable to create directory \(error.debugDescription)")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

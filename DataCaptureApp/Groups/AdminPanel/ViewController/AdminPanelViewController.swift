@@ -2,8 +2,8 @@
 //  AdminPanelViewController.swift
 //  DataCaptureApp
 //
-//  Created by Stanislau Sakharchuk on 7/14/18.
-//  Copyright © 2018 Stanislau Sakharchuk. All rights reserved.
+//  Created by Evgeny Mahnach on 7/14/18.
+//  Copyright © 2018 Evgeny Mahnach. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +12,9 @@ class AdminPanelViewController: UIViewController {
     
     // - UI
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var exportAndRemoveDataButton: UIButton!
+    @IBOutlet weak var exportButton: UIButton!
     
     // - Manager / Service
     fileprivate var layoutService: AdminPanelLayoutService!
@@ -27,6 +30,14 @@ class AdminPanelViewController: UIViewController {
     
     @IBAction func logOutButtonAction(_ sender: UIButton) {
         layoutService.logOutButtonAction()
+    }
+    
+    @IBAction func exportButtonAction(_ sender: UIButton) {
+        layoutService.exportButtonAction(isNeedToRemove: false, sendDataModel: dataSource.getSendDataModel())
+    }
+    
+    @IBAction func exportAndRemoveAction(_ sender: UIButton) {
+        layoutService.exportButtonAction(isNeedToRemove: true, sendDataModel: dataSource.getSendDataModel())
     }
     
 }

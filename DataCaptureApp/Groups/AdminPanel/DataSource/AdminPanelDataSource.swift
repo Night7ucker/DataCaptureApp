@@ -2,8 +2,8 @@
 //  AdminPanelDataSource.swift
 //  DataCaptureApp
 //
-//  Created by Stanislau Sakharchuk on 7/14/18.
-//  Copyright © 2018 Stanislau Sakharchuk. All rights reserved.
+//  Created by Evgeny Mahnach on 7/14/18.
+//  Copyright © 2018 Evgeny Mahnach. All rights reserved.
 //
 
 import UIKit
@@ -15,6 +15,7 @@ class AdminPanelDataSource: NSObject {
     
     // - Manager / Service
     fileprivate let moneyCompetitionDatabaseManager = MoneyCompetitionDatabaseManager()
+    fileprivate let mortgageDatabaseManager = MortgagePromotionDatabaseManager()
     
     // - Data
     fileprivate var checkmarkArray: [Bool] = [
@@ -22,12 +23,14 @@ class AdminPanelDataSource: NSObject {
         false
     ]
     
-    fileprivate lazy var leads: [Int] = {
+    fileprivate var leads: [Int] {
         return [
             moneyCompetitionDatabaseManager.get().count,
-            moneyCompetitionDatabaseManager.get().count
+             mortgageDatabaseManager.get().count
         ]
-    }()
+    }
+    
+    fileprivate var sendDataModel = SendDataModel()
     
     // - Lifecycle
     
@@ -38,6 +41,12 @@ class AdminPanelDataSource: NSObject {
         configure()
     }
     
+    // - API
+    
+    func getSendDataModel() -> SendDataModel {
+        return sendDataModel
+    }
+    
 }
 
 // MARK: -
@@ -45,23 +54,21 @@ class AdminPanelDataSource: NSObject {
 
 extension AdminPanelDataSource: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return Constant.sectionTitles.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Constant.sectionTitles[section]
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == Constant.sectionTitles.count - 1 {
-            return downloadCell(for: indexPath)
+        switch indexPath.row {
+        case 0:
+            return sectionCell(for: indexPath)
+        case 1:
+            return travelCell(for: indexPath)
+        case 2:
+            return mortgageCell(for: indexPath)
+        default:
+            return UITableViewCell()
         }
-        return adminCell(for: indexPath)
     }
     
 }
@@ -73,15 +80,10 @@ extension AdminPanelDataSource: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        checkmarkArray[indexPath.section] = !checkmarkArray[indexPath.section]
-        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == Constant.sectionTitles.count - 1 {
-            return 84
-        }
-        return 44
+        return 54
     }
     
 }
@@ -91,14 +93,26 @@ extension AdminPanelDataSource: UITableViewDelegate {
 
 fileprivate extension AdminPanelDataSource {
     
-    func adminCell(for indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.admin.rawValue, for: indexPath) as! AdminPanelCell
-        cell.set(with: String(leads[indexPath.section]), isChecked: checkmarkArray[indexPath.section])
+    func sectionCell(for indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.section.rawValue, for: indexPath) as! AdminPanelSectionCell
         return cell
     }
     
-    func downloadCell(for indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.download.rawValue, for: indexPath) as! AdminPanelDownloadCell
+    func travelCell(for indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.travel.rawValue, for: indexPath) as! AdminPanelTravelMoneyCell
+        cell.downloadFileButton.isChecked = true
+        cell.sendToSalesforceButton.isChecked = true
+        cell.set(with: leads[indexPath.row - 1])
+        cell.delegate = self
+        return cell
+    }
+    
+    func mortgageCell(for indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.mortgage.rawValue, for: indexPath) as! AdminPanelMortgageCell
+        cell.downloadFileButton.isChecked = true
+        cell.sendToSalesforceButton.isChecked = true
+        cell.set(with: leads[indexPath.row - 1])
+        cell.delegate = self
         return cell
     }
     
@@ -123,13 +137,33 @@ fileprivate extension AdminPanelDataSource {
         tableView.separatorColor = .clear
     }
     
-    enum Constant {
-        static let sectionTitles = ["Travel Money", "Morgages", ""]
+    enum Cell: String {
+        case section = "AdminPanelSectionCell"
+        case travel = "AdminPanelTravelMoneyCell"
+        case mortgage = "AdminPanelMortgageCell"
     }
     
-    enum Cell: String {
-        case admin = "AdminPanelCell"
-        case download = "AdminPanelDownloadCell"
+}
+
+// MARK: -
+// MARK: - Layout delegate
+
+extension AdminPanelDataSource: AdminPanelLayoutDelegate {
+    
+    func didTapTravelButton(isDownload: Bool, isChecked: Bool) {
+        if isDownload {
+            sendDataModel.isNeedToDownloadMoneyTravel = isChecked
+        } else {
+            sendDataModel.isNeedToSendMoneyTravelToSalesforce = isChecked
+        }
+    }
+    
+    func didTapMortgageButton(isDownload: Bool, isChecked: Bool) {
+        if isDownload {
+            sendDataModel.isNeedToDownloadMortgage = isChecked
+        } else {
+            sendDataModel.isNeedToSendMortgageToSalesforce = isChecked
+        }
     }
     
 }

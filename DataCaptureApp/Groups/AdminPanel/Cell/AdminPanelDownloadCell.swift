@@ -2,8 +2,8 @@
 //  AdminPanelDownloadCell.swift
 //  DataCaptureApp
 //
-//  Created by Stanislau Sakharchuk on 7/14/18.
-//  Copyright © 2018 Stanislau Sakharchuk. All rights reserved.
+//  Created by Evgeny Mahnach on 7/14/18.
+//  Copyright © 2018 Evgeny Mahnach. All rights reserved.
 //
 
 import UIKit

@@ -2,8 +2,8 @@
 //  HomeScreenLayoutService.swift
 //  DataCaptureApp
 //
-//  Created by Stanislau Sakharchuk on 7/14/18.
-//  Copyright © 2018 Stanislau Sakharchuk. All rights reserved.
+//  Created by Evgeny Mahnach on 7/14/18.
+//  Copyright © 2018 Evgeny Mahnach. All rights reserved.
 //
 
 import UIKit
@@ -18,6 +18,8 @@ class HomeScreenLayoutService: NSObject {
     init(viewController: HomeScreenViewController) {
         self.viewController = viewController
         super.init()
+        
+        configure()
     }
     
     func viewWillAppear(animated: Bool) {
@@ -36,7 +38,8 @@ extension HomeScreenLayoutService {
     }
     
     func adminLoginButtonAction() {
-        presentAdminLoginViewController()
+//        presentAdminLoginViewController()
+        pushAdminLoginViewController()
     }
     
     func mortgagePromotionButtonAction() {
@@ -69,6 +72,12 @@ extension HomeScreenLayoutService {
         viewController.present(adminLoginViewController, animated: true, completion: nil)
     }
     
+    func pushAdminLoginViewController() {
+        let adminPanelViewController = UIStoryboard(storyboard: .adminLogin).instantiateInitialViewController() as! AdminLoginViewController
+        
+        viewController.navigationController?.pushViewController(adminPanelViewController, animated: true)
+    }
+    
     func pushAdminPanelViewController() {
         let adminPanelViewController = UIStoryboard(storyboard: .adminPanel).instantiateInitialViewController() as! AdminPanelViewController
         
@@ -89,7 +98,15 @@ extension HomeScreenLayoutService {
 fileprivate extension HomeScreenLayoutService {
     
     func configure() {
+        setCornerRadiuses()
+    }
+    
+    func setCornerRadiuses() {
+        viewController.leftGetStartedButton.layer.cornerRadius = 12
+        viewController.rightGetStartedButton.layer.cornerRadius = 12
         
+        viewController.blueMainView.layer.cornerRadius = 25
+        viewController.redMainView.layer.cornerRadius = 25
     }
     
 }

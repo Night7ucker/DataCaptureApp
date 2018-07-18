@@ -2,8 +2,8 @@
 //  AdminLoginViewController.swift
 //  DataCaptureApp
 //
-//  Created by Stanislau Sakharchuk on 7/14/18.
-//  Copyright © 2018 Stanislau Sakharchuk. All rights reserved.
+//  Created by Evgeny Mahnach on 7/14/18.
+//  Copyright © 2018 Evgeny Mahnach. All rights reserved.
 //
 
 import UIKit
@@ -11,10 +11,11 @@ import UIKit
 class AdminLoginViewController: UIViewController {
     
     // - UI
-    
-    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var resetPasswordButton: UIButton!
     
     // - Manager / Service
     fileprivate var layoutService: AdminLoginLayoutService!
@@ -30,30 +31,14 @@ class AdminLoginViewController: UIViewController {
         configure()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        layoutService.viewWillAppear(animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        layoutService.viewWillDisappear(animted: animated)
-    }
-    
-    // - Tap
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-        layoutService.touchesBegan(touches, with: event)
-    }
-    
     // - Action
     
+    @IBAction func homeButtonAction(_ sender: UIButton) {
+        layoutService.homeButtonAction()
+    }
+    
     @IBAction func enterButtonAction(_ sender: UIButton) {
-        layoutService.enterButtonAction()
+        layoutService.loginButtonAction()
     }
 }
 
@@ -64,6 +49,7 @@ fileprivate extension AdminLoginViewController {
     
     func configure() {
         setupLayoutService()
+        hideKeyboardWhenTappedAround()
     }
     
     func setupLayoutService() {
